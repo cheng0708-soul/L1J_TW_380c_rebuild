@@ -1,0 +1,456 @@
+Buildfile: /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/build.xml
+
+clean:
+   [delete] Deleting directory /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/bin
+
+compile_server:
+    [mkdir] Created dir: /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/bin
+    [javac] Compiling 697 source files to /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/bin
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/FileLogFormatter.java:23: 警告: '_' 用作标识符
+    [javac] 	private static final String _ = "\t";
+    [javac] 	                            ^
+    [javac]   (Java SE 8 之后的发行版中可能不支持使用 '_' 作为标识符)
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/FileLogFormatter.java:29: 警告: '_' 用作标识符
+    [javac] 		output.append(_);
+    [javac] 		              ^
+    [javac]   (Java SE 8 之后的发行版中可能不支持使用 '_' 作为标识符)
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/FileLogFormatter.java:31: 警告: '_' 用作标识符
+    [javac] 		output.append(_);
+    [javac] 		              ^
+    [javac]   (Java SE 8 之后的发行版中可能不支持使用 '_' 作为标识符)
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/FileLogFormatter.java:33: 警告: '_' 用作标识符
+    [javac] 		output.append(_);
+    [javac] 		              ^
+    [javac]   (Java SE 8 之后的发行版中可能不支持使用 '_' 作为标识符)
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/FileLogFormatter.java:35: 警告: '_' 用作标识符
+    [javac] 		output.append(_);
+    [javac] 		              ^
+    [javac]   (Java SE 8 之后的发行版中可能不支持使用 '_' 作为标识符)
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/afk/CoopFollowService.java:141: 错误: 找不到符号
+    [javac]             AfkScheduler.scheduleAtFixedRate(new Runnable() {
+    [javac]             ^
+    [javac]   符号:   变量 AfkScheduler
+    [javac]   位置: 类 CoopFollowService
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/afk/CoopFollowService.java:634: 错误: 找不到符号
+    [javac]             AfkCenterEngine.process(pc);
+    [javac]             ^
+    [javac]   符号:   变量 AfkCenterEngine
+    [javac]   位置: 类 CoopFollowService
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/afk/CoopFollowService.java:1020: 错误: 找不到符号
+    [javac]             AfkCombatUtil.physicalAttack(pc, mob);
+    [javac]             ^
+    [javac]   符号:   变量 AfkCombatUtil
+    [javac]   位置: 类 CoopFollowService
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/model/Instance/L1MonsterInstance.java:391: 错误: 不兼容的类型: L1MonsterInstance无法转换为int
+    [javac] 					pc.sendPackets(new S_HPMeter(this, true));
+    [javac] 					                             ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/model/Instance/L1MonsterInstance.java:594: 错误: 不兼容的类型: 从long转换到int可能会有损失
+    [javac] 			CalcExp.calcExp(pc, getId(), targetList, hateList, exp);
+    [javac] 			                                                   ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/model/Instance/L1MonsterInstance.java:624: 错误: 不兼容的类型: 从long转换到int可能会有损失
+    [javac] 					CalcExp.calcExp(pc, getId(), targetList, hateList, exp);
+    [javac] 					                                                   ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:320: 错误: 找不到符号
+    [javac] 				try { l1j.server.server.afk.AfkEventBridge.onTownWarp(pc); } catch (Throwable __e1) {}
+    [javac] 				                           ^
+    [javac]   符号:   类 AfkEventBridge
+    [javac]   位置: 程序包 l1j.server.server.afk
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:321: 错误: 找不到符号
+    [javac] 				try { l1j.server.server.afk.AfkEventBridge.onDeath(pc); } catch (Throwable __e2) {}
+    [javac] 				                           ^
+    [javac]   符号:   类 AfkEventBridge
+    [javac]   位置: 程序包 l1j.server.server.afk
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:352: 错误: 找不到符号
+    [javac] 				try { l1j.server.server.afk.AfkController.forceOff(pc); } catch (Throwable __eF1) {}
+    [javac] 				                           ^
+    [javac]   符号:   类 AfkController
+    [javac]   位置: 程序包 l1j.server.server.afk
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:354: 错误: 找不到符号
+    [javac] 				try { l1j.server.server.afk.AfkService.onDisconnect(pc); } catch (Throwable __eF3) {}
+    [javac] 				                           ^
+    [javac]   符号:   类 AfkService
+    [javac]   位置: 程序包 l1j.server.server.afk
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:355: 错误: 找不到符号
+    [javac] 				try { l1j.server.server.afk.AfkMagicRegistry.setEnabled(pc, false); } catch (Throwable __eF4) {}
+    [javac] 				                           ^
+    [javac]   符号:   类 AfkMagicRegistry
+    [javac]   位置: 程序包 l1j.server.server.afk
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:362: 错误: 找不到符号
+    [javac] 				try { l1j.server.server.afk.AfkEventBridge.onTownWarp(pc); } catch (Throwable __e1) {}
+    [javac] 				                           ^
+    [javac]   符号:   类 AfkEventBridge
+    [javac]   位置: 程序包 l1j.server.server.afk
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:363: 错误: 找不到符号
+    [javac] 				try { l1j.server.server.afk.AfkEventBridge.onDeath(pc); } catch (Throwable __e2) {}
+    [javac] 				                           ^
+    [javac]   符号:   类 AfkEventBridge
+    [javac]   位置: 程序包 l1j.server.server.afk
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:365: 错误: 找不到符号
+    [javac] 				try { l1j.server.server.afk.AfkController.forceOff(pc); } catch (Throwable __eF1) {}
+    [javac] 				                           ^
+    [javac]   符号:   类 AfkController
+    [javac]   位置: 程序包 l1j.server.server.afk
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:367: 错误: 找不到符号
+    [javac] 				try { l1j.server.server.afk.AfkService.onDisconnect(pc); } catch (Throwable __eF3) {}
+    [javac] 				                           ^
+    [javac]   符号:   类 AfkService
+    [javac]   位置: 程序包 l1j.server.server.afk
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:368: 错误: 找不到符号
+    [javac] 				try { l1j.server.server.afk.AfkMagicRegistry.setEnabled(pc, false); } catch (Throwable __eF4) {}
+    [javac] 				                           ^
+    [javac]   符号:   类 AfkMagicRegistry
+    [javac]   位置: 程序包 l1j.server.server.afk
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:390: 错误: 找不到符号
+    [javac]         try { l1j.server.server.afk.AfkController.forceOff(pc); } catch (Throwable __e1) {}
+    [javac]                                    ^
+    [javac]   符号:   类 AfkController
+    [javac]   位置: 程序包 l1j.server.server.afk
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:392: 错误: 找不到符号
+    [javac]         try { l1j.server.server.afk.AfkService.onDisconnect(pc); } catch (Throwable __e3) {}
+    [javac]                                    ^
+    [javac]   符号:   类 AfkService
+    [javac]   位置: 程序包 l1j.server.server.afk
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:393: 错误: 找不到符号
+    [javac]         try { l1j.server.server.afk.AfkMagicRegistry.setEnabled(pc, false); } catch (Throwable __e4) {}
+    [javac]                                    ^
+    [javac]   符号:   类 AfkMagicRegistry
+    [javac]   位置: 程序包 l1j.server.server.afk
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:462: 错误: 找不到符号
+    [javac]                         l1j.server.server.model.item.function.AutoFarmToggle.get()
+    [javac]                                                              ^
+    [javac]   符号:   类 AutoFarmToggle
+    [javac]   位置: 程序包 l1j.server.server.model.item.function
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:506: 错误: 找不到符号
+    [javac]                         l1j.server.server.model.item.function.AfkRecharge10m.get().execute(0, pc, l1iteminstance);
+    [javac]                                                              ^
+    [javac]   符号:   类 AfkRecharge10m
+    [javac]   位置: 程序包 l1j.server.server.model.item.function
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:513: 错误: 找不到符号
+    [javac]                         l1j.server.server.model.item.function.AfkRecharge30m.get().execute(0, pc, l1iteminstance);
+    [javac]                                                              ^
+    [javac]   符号:   类 AfkRecharge30m
+    [javac]   位置: 程序包 l1j.server.server.model.item.function
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:520: 错误: 找不到符号
+    [javac]                         l1j.server.server.model.item.function.AfkRecharge60m.get().execute(0, pc, l1iteminstance);
+    [javac]                                                              ^
+    [javac]   符号:   类 AfkRecharge60m
+    [javac]   位置: 程序包 l1j.server.server.model.item.function
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:528: 错误: 找不到符号
+    [javac]                         l1j.server.server.model.item.function.AfkUpgradeHighGrade.get().execute(0, pc, l1iteminstance);
+    [javac]                                                              ^
+    [javac]   符号:   类 AfkUpgradeHighGrade
+    [javac]   位置: 程序包 l1j.server.server.model.item.function
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:589: 错误: 找不到符号
+    [javac]                     l1j.server.server.model.item.function.PriestIQPotion2.get().execute(l, pc, l1iteminstance);
+    [javac]                                                          ^
+    [javac]   符号:   类 PriestIQPotion2
+    [javac]   位置: 程序包 l1j.server.server.model.item.function
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:597: 错误: 找不到符号
+    [javac]                     l1j.server.server.model.item.function.PriestGrowthPotion.get().execute(l, pc, l1iteminstance);
+    [javac]                                                          ^
+    [javac]   符号:   类 PriestGrowthPotion
+    [javac]   位置: 程序包 l1j.server.server.model.item.function
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:605: 错误: 找不到符号
+    [javac]                     l1j.server.server.model.item.function.PrincessGrowthPotion.get().execute(l, pc, l1iteminstance);
+    [javac]                                                          ^
+    [javac]   符号:   类 PrincessGrowthPotion
+    [javac]   位置: 程序包 l1j.server.server.model.item.function
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:672: 错误: 找不到符号
+    [javac] 			        if (pc.hasSkillEffect(l1j.server.server.model.skill.L1SkillId.STATUS_PERSONAL_LUCKY_CHARM)) {
+    [javac] 			                                                                     ^
+    [javac]   符号:   变量 STATUS_PERSONAL_LUCKY_CHARM
+    [javac]   位置: 类 L1SkillId
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_ItemUSe.java:676: 错误: 找不到符号
+    [javac] 			        pc.setSkillEffect(l1j.server.server.model.skill.L1SkillId.STATUS_PERSONAL_LUCKY_CHARM, time * 1000);
+    [javac] 			                                                                 ^
+    [javac]   符号:   变量 STATUS_PERSONAL_LUCKY_CHARM
+    [javac]   位置: 类 L1SkillId
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_MoveChar.java:178: 错误: 找不到符号
+    [javac] 		L1CastleLocation.checkMagicDollInWarArea(pc);
+    [javac] 		                ^
+    [javac]   符号:   方法 checkMagicDollInWarArea(L1PcInstance)
+    [javac]   位置: 类 L1CastleLocation
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:252: 错误: 找不到符号
+    [javac]             l1j.server.server.clientpackets.C_PShopBypass.handle(pc, __cmd);
+    [javac]                                            ^
+    [javac]   符号:   类 C_PShopBypass
+    [javac]   位置: 程序包 l1j.server.server.clientpackets
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:269: 错误: 找不到符号
+    [javac] 			if (l1j.server.server.afk.AfkUiRouter.tryHandleNpcAction(pc, null, __afk_action__, null)) {
+    [javac] 			                         ^
+    [javac]   符号:   类 AfkUiRouter
+    [javac]   位置: 程序包 l1j.server.server.afk
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:371: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.setAutoSupport(charId, true);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:372: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSupportRunner.startFor(pc);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSupportRunner
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:375: 错误: 程序包l1j.server.server.priest.PriestSettingsStore不存在
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.Settings st = l1j.server.server.priest.PriestSettingsStore.get(charId);
+    [javac]                                                                     ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:375: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.Settings st = l1j.server.server.priest.PriestSettingsStore.get(charId);
+    [javac]                                                                                                            ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:377: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.setAutoSupport(charId, toOn);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:378: 错误: 找不到符号
+    [javac]                         if (toOn) l1j.server.server.priest.PriestSupportRunner.startFor(pc);
+    [javac]                                                           ^
+    [javac]   符号:   类 PriestSupportRunner
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:379: 错误: 找不到符号
+    [javac]                         else l1j.server.server.priest.PriestSupportRunner.stopFor(charId);
+    [javac]                                                      ^
+    [javac]   符号:   类 PriestSupportRunner
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:382: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.setAutoSupport(charId, false);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:383: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSupportRunner.stopFor(charId);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSupportRunner
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:386: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.deltaThreshold(charId, 10);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:389: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.deltaThreshold(charId, -10);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:396: 错误: 找不到符号
+    [javac]                                 l1j.server.server.priest.PriestSettingsStore.setThreshold(charId, v);
+    [javac]                                                         ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:415: 错误: 程序包l1j.server.server.priest.PriestIqDAO2不存在
+    [javac]                             l1j.server.server.priest.PriestIqDAO2.Row __row =
+    [javac]                                                                  ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:417: 错误: 找不到符号
+    [javac]                                     ? l1j.server.server.priest.PriestIqDAO2.byItemObjId(__bound.getId())
+    [javac]                                                               ^
+    [javac]   符号:   类 PriestIqDAO2
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:436: 错误: 找不到符号
+    [javac]                                         __baseInt = l1j.server.server.priest.NpcIntelResolver.getBaseIntByItemAndName(
+    [javac]                                                                             ^
+    [javac]   符号:   类 NpcIntelResolver
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:453: 错误: 程序包l1j.server.server.priest.PriestSettingsStore不存在
+    [javac]                             l1j.server.server.priest.PriestSettingsStore.Settings st =
+    [javac]                                                                         ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:454: 错误: 找不到符号
+    [javac]                                 l1j.server.server.priest.PriestSettingsStore.ensureLoaded(charId, __mpInit, __regen);
+    [javac]                                                         ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:455: 错误: 找不到符号
+    [javac]                             l1j.server.server.priest.PriestSettingsStore.regenTick(charId);
+    [javac]                                                     ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:4446: 错误: 不兼容的类型: 从long转换到int可能会有损失
+    [javac] 										petamu.getId(), upLv, lvExp);
+    [javac] 										                      ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCAction.java:5486: 错误: 找不到符号
+    [javac]             l1j.server.server.priest.PriestHtmlHook.tryOpen(pc, null, __bound);
+    [javac]                                     ^
+    [javac]   符号:   类 PriestHtmlHook
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalk.java:59: 错误: 找不到符号
+    [javac]                                 l1j.server.server.priest.PriestItemSelector.findSameTier(pc, npc);
+    [javac]                                                         ^
+    [javac]   符号:   类 PriestItemSelector
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalk.java:64: 错误: 找不到符号
+    [javac]                                 l1j.server.server.priest.PriestIqDAO2.ensure(
+    [javac]                                                         ^
+    [javac]   符号:   类 PriestIqDAO2
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalk.java:84: 错误: 程序包l1j.server.server.priest.PriestSettingsStore不存在
+    [javac]                     l1j.server.server.priest.PriestSettingsStore.Settings st =
+    [javac]                                                                 ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalk.java:85: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.ensureLoaded(pc.getId(), __mpInit, __regen);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalk.java:86: 错误: 找不到符号
+    [javac]                     l1j.server.server.priest.PriestSettingsStore.regenTick(pc.getId());
+    [javac]                                             ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalk.java:93: 错误: 非法的类型开始
+    [javac]                     if (st.autoSupport) { l1j.server.server.priest.PriestSupportRunner.startFor(pc); }
+    [javac]                        ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalk.java:93: 错误: 找不到符号
+    [javac]                     if (st.autoSupport) { l1j.server.server.priest.PriestSupportRunner.startFor(pc); }
+    [javac]                                                                   ^
+    [javac]   符号:   类 PriestSupportRunner
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:110: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.setAutoSupport(charId, true);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:111: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSupportRunner.startFor(activeChar);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSupportRunner
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:114: 错误: 程序包l1j.server.server.priest.PriestSettingsStore不存在
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.Settings st = l1j.server.server.priest.PriestSettingsStore.get(charId);
+    [javac]                                                                     ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:114: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.Settings st = l1j.server.server.priest.PriestSettingsStore.get(charId);
+    [javac]                                                                                                            ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:116: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.setAutoSupport(charId, toOn);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:117: 错误: 找不到符号
+    [javac]                         if (toOn) l1j.server.server.priest.PriestSupportRunner.startFor(activeChar);
+    [javac]                                                           ^
+    [javac]   符号:   类 PriestSupportRunner
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:118: 错误: 找不到符号
+    [javac]                         else l1j.server.server.priest.PriestSupportRunner.stopFor(charId);
+    [javac]                                                      ^
+    [javac]   符号:   类 PriestSupportRunner
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:121: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.setAutoSupport(charId, false);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:122: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSupportRunner.stopFor(charId);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSupportRunner
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:125: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.deltaThreshold(charId, 10);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:128: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.deltaThreshold(charId, -10);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:135: 错误: 找不到符号
+    [javac]                                 l1j.server.server.priest.PriestSettingsStore.setThreshold(charId, v);
+    [javac]                                                         ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:150: 错误: 程序包l1j.server.server.priest.PriestSettingsStore不存在
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.Settings st = l1j.server.server.priest.PriestSettingsStore.get(charId);
+    [javac]                                                                     ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:150: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.Settings st = l1j.server.server.priest.PriestSettingsStore.get(charId);
+    [javac]                                                                                                            ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:151: 错误: 找不到符号
+    [javac]                         l1j.server.server.priest.PriestSettingsStore.regenTick(charId);
+    [javac]                                                 ^
+    [javac]   符号:   类 PriestSettingsStore
+    [javac]   位置: 程序包 l1j.server.server.priest
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_NPCTalkAction.java:167: 错误: 找不到符号
+    [javac] 			if (l1j.server.server.afk.AfkUiRouter.tryHandleNpcAction(activeChar, null, __afk_action__, null)) {
+    [javac] 			                         ^
+    [javac]   符号:   类 AfkUiRouter
+    [javac]   位置: 程序包 l1j.server.server.afk
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_Result.java:103: 错误: 程序包l1j.server.server.clientpackets.C_PShopBypass不存在
+    [javac]                 l1j.server.server.clientpackets.C_PShopBypass.PShopSellOrder order = l1j.server.server.clientpackets.C_PShopBypass.getPendingSellOrder(pc.getId());
+    [javac]                                                              ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_Result.java:103: 错误: 找不到符号
+    [javac]                 l1j.server.server.clientpackets.C_PShopBypass.PShopSellOrder order = l1j.server.server.clientpackets.C_PShopBypass.getPendingSellOrder(pc.getId());
+    [javac]                                                                                                                     ^
+    [javac]   符号:   类 C_PShopBypass
+    [javac]   位置: 程序包 l1j.server.server.clientpackets
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_Result.java:111: 错误: 找不到符号
+    [javac]                     l1j.server.server.clientpackets.C_PShopBypass.processPShopBuy(pc, pshopNpc, order, idxArr, qtyArr);
+    [javac]                                                    ^
+    [javac]   符号:   类 C_PShopBypass
+    [javac]   位置: 程序包 l1j.server.server.clientpackets
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_Result.java:112: 错误: 找不到符号
+    [javac]                     l1j.server.server.clientpackets.C_PShopBypass.clearPendingSellOrder(pc.getId());
+    [javac]                                                    ^
+    [javac]   符号:   类 C_PShopBypass
+    [javac]   位置: 程序包 l1j.server.server.clientpackets
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_Result.java:117: 错误: 程序包l1j.server.server.clientpackets.C_PShopBypass不存在
+    [javac]                 l1j.server.server.clientpackets.C_PShopBypass.PShopBuyOrder order = l1j.server.server.clientpackets.C_PShopBypass.getPendingBuyOrder(pc.getId());
+    [javac]                                                              ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_Result.java:117: 错误: 找不到符号
+    [javac]                 l1j.server.server.clientpackets.C_PShopBypass.PShopBuyOrder order = l1j.server.server.clientpackets.C_PShopBypass.getPendingBuyOrder(pc.getId());
+    [javac]                                                                                                                    ^
+    [javac]   符号:   类 C_PShopBypass
+    [javac]   位置: 程序包 l1j.server.server.clientpackets
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_Result.java:125: 错误: 找不到符号
+    [javac]                     l1j.server.server.clientpackets.C_PShopBypass.processPShopSell(pc, pshopNpc, order, idxArr, qtyArr);
+    [javac]                                                    ^
+    [javac]   符号:   类 C_PShopBypass
+    [javac]   位置: 程序包 l1j.server.server.clientpackets
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_Result.java:126: 错误: 找不到符号
+    [javac]                     l1j.server.server.clientpackets.C_PShopBypass.clearPendingBuyOrder(pc.getId());
+    [javac]                                                    ^
+    [javac]   符号:   类 C_PShopBypass
+    [javac]   位置: 程序包 l1j.server.server.clientpackets
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_Result.java:147: 错误: 找不到符号
+    [javac] 			if (shopForTax != null && shopForTax.isTaxFreeShop()) {
+    [javac] 			                                    ^
+    [javac]   符号:   方法 isTaxFreeShop()
+    [javac]   位置: 类型为L1Shop的变量 shopForTax
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_Result.java:466: 错误: 找不到符号
+    [javac] try { __currency = targetPc.getPrivateShopCurrencyItemId(); 
+    [javac]                            ^
+    [javac]   符号:   方法 getPrivateShopCurrencyItemId()
+    [javac]   位置: 类型为L1PcInstance的变量 targetPc
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/clientpackets/C_Result.java:472: 错误: 找不到符号
+    [javac]             targetPc.setPrivateShopCurrencyItemId(__currency);
+    [javac]                     ^
+    [javac]   符号:   方法 setPrivateShopCurrencyItemId(int)
+    [javac]   位置: 类型为L1PcInstance的变量 targetPc
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/model/item/function/CoopFollowToggle.java:16: 错误: CoopFollowToggle不是抽象的, 并且未覆盖ItemExecutorAdapter中的抽象方法execute(int[],L1PcInstance,L1ItemInstance)
+    [javac] public class CoopFollowToggle extends ItemExecutorAdapter {
+    [javac]        ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/model/item/function/CoopFollowToggle.java:24: 错误: 方法不会覆盖或实现超类型的方法
+    [javac]     @Override
+    [javac]     ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/serverpackets/S_NPCPack.java:54: 错误: 找不到符号
+    [javac] 		writeExp(npc.getExp());
+    [javac] 		^
+    [javac]   符号:   方法 writeExp(int)
+    [javac]   位置: 类 S_NPCPack
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/serverpackets/S_ShopSellList.java:69: 错误: 找不到符号
+    [javac] 			int price = shop.isTaxFreeShop() ? basePrice : calc.layTax(basePrice);
+    [javac] 			                ^
+    [javac]   符号:   方法 isTaxFreeShop()
+    [javac]   位置: 类型为L1Shop的变量 shop
+    [javac] 注: 某些消息已经过简化; 请使用 -Xdiags:verbose 重新编译以获得完整输出
+    [javac] 90 个错误
+    [javac] 5 个警告
+
+BUILD FAILED
+/Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/build.xml:65: Compile failed; see the compiler error output for details.
+
+Total time: 1 second

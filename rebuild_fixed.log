@@ -1,0 +1,69 @@
+Buildfile: /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/build.xml
+
+clean:
+   [delete] Deleting directory /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/bin
+
+clean:
+
+compile_loader:
+    [mkdir] Created dir: /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/bin
+    [javac] Compiling 1 source file to /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/bin
+
+jar_loader:
+      [jar] Building jar: /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/l1jloader.jar
+   [delete] Deleting directory /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/bin
+
+compile_server:
+    [mkdir] Created dir: /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/bin
+    [javac] Compiling 802 source files to /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/bin
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/FileLogFormatter.java:23: 警告: '_' 用作标识符
+    [javac] 	private static final String _ = "\t";
+    [javac] 	                            ^
+    [javac]   (Java SE 8 之后的发行版中可能不支持使用 '_' 作为标识符)
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/FileLogFormatter.java:29: 警告: '_' 用作标识符
+    [javac] 		output.append(_);
+    [javac] 		              ^
+    [javac]   (Java SE 8 之后的发行版中可能不支持使用 '_' 作为标识符)
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/FileLogFormatter.java:31: 警告: '_' 用作标识符
+    [javac] 		output.append(_);
+    [javac] 		              ^
+    [javac]   (Java SE 8 之后的发行版中可能不支持使用 '_' 作为标识符)
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/FileLogFormatter.java:33: 警告: '_' 用作标识符
+    [javac] 		output.append(_);
+    [javac] 		              ^
+    [javac]   (Java SE 8 之后的发行版中可能不支持使用 '_' 作为标识符)
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/FileLogFormatter.java:35: 警告: '_' 用作标识符
+    [javac] 		output.append(_);
+    [javac] 		              ^
+    [javac]   (Java SE 8 之后的发行版中可能不支持使用 '_' 作为标识符)
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/Account.java:30: 警告: BASE64Encoder是内部专用 API, 可能会在未来发行版中删除
+    [javac] import sun.misc.BASE64Encoder;
+    [javac]                ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/Logins.java:31: 警告: BASE64Decoder是内部专用 API, 可能会在未来发行版中删除
+    [javac] import sun.misc.BASE64Decoder;
+    [javac]                ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/Logins.java:32: 警告: BASE64Encoder是内部专用 API, 可能会在未来发行版中删除
+    [javac] import sun.misc.BASE64Encoder;
+    [javac]                ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/Account.java:97: 警告: BASE64Encoder是内部专用 API, 可能会在未来发行版中删除
+    [javac] 		return new BASE64Encoder().encode(buf);
+    [javac] 		           ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/Logins.java:57: 警告: BASE64Decoder是内部专用 API, 可能会在未来发行版中删除
+    [javac] 				abyte2 = new BASE64Decoder().decodeBuffer(rs.getString(1));
+    [javac] 				             ^
+    [javac] /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/src/l1j/server/server/Logins.java:69: 警告: BASE64Encoder是内部专用 API, 可能会在未来发行版中删除
+    [javac] 					pstm.setString(2, new BASE64Encoder().encode(abyte1));
+    [javac] 					                      ^
+    [javac] 11 个警告
+
+copy_c3p0_config:
+     [copy] Copying 1 file to /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/bin
+
+jar_server:
+      [jar] Building jar: /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/l1jserver.jar
+   [delete] Deleting directory /Users/wangluke/Localprojects/java380c/L1J_TW_3.80c_Original/bin
+
+all:
+
+BUILD SUCCESSFUL
+Total time: 3 seconds
