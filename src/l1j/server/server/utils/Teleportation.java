@@ -66,6 +66,7 @@ public class Teleportation {
 		}
 
 		pc.setTeleport(true);
+		try {
 
 		final L1Clan clan = L1World.getInstance().getClan(pc.getClanname());
 		if (clan != null) {
@@ -179,7 +180,9 @@ public class Teleportation {
 			updatePc.updateObject();
 		}
 
-		pc.setTeleport(false);
+		} finally {
+			pc.setTeleport(false);
+		}
 
 		if (pc.hasSkillEffect(WIND_SHACKLE)) {
 			pc.sendPackets(new S_SkillIconWindShackle(pc.getId(), pc.getSkillEffectTimeSec(WIND_SHACKLE)));
