@@ -102,6 +102,7 @@ import l1j.server.server.templates.L1Skills;
 import l1j.server.server.types.Point;
 import l1j.server.server.utils.Random;
 
+import l1j.server.server.serverpackets.S_SkillHaste;
 import l1j.server.server.datatables.WeaponMagicTable;
 import l1j.server.server.model.skill.L1SkillUse;
 import l1j.server.server.templates.L1WeaponMagic;
@@ -1960,6 +1961,7 @@ private int calcAttrEnchantDmg() {
 		}
 
 	// 新增：weapon_magic表驱动（自定义魔法武器，如火焰武士刀）
+	// 攻击型技能走L1SkillUse，减益型技能直接对当前目标施放
 	L1WeaponMagic wm = WeaponMagicTable.getInstance().get(_weaponId);
 	if (wm != null) {
 		int prob = wm.getProbability();
@@ -1974,9 +1976,29 @@ private int calcAttrEnchantDmg() {
 		} catch (Throwable t) {}
 		if (prob > Random.nextInt(100) + 1) {
 			try {
-				L1SkillUse skillUse = new L1SkillUse();
-				skillUse.handleCommands(_pc, wm.getSkillId(), _target.getId(),
-					_target.getX(), _target.getY(), null, 0, wm.getCastType());
+				L1Skills skill = SkillsTable.getInstance().getTemplate(wm.getSkillId());
+				if (skill != null && _target != null
+						&& (skill.getTarget().equals("buff") || skill.getTarget().equals("none"))) {
+					// 减益/状态技能：发送施法动画后直接对当前攻击目标生效
+					if (_pc != null) {
+						_pc.sendPackets(new S_SkillSound(_pc.getId(), skill.getCastGfx()));
+						_pc.broadcastPacket(new S_SkillSound(_pc.getId(), skill.getCastGfx()));
+					}
+					if (wm.getSkillId() == 29 || wm.getSkillId() == 76) { // 缓速术/集体缓速术
+						if (_target.getMoveSpeed() == 0) {
+							_pc.sendPackets(new S_SkillHaste(_target.getId(), 2, 64));
+							_pc.broadcastPacket(new S_SkillHaste(_target.getId(), 2, 0));
+							_target.setMoveSpeed(2);
+							_target.setSkillEffect(wm.getSkillId(), 64 * 1000);
+						}								
+					}
+					// 如需新增其他减益技能，在此添加else if分支
+				} else if (skill != null && skill.getTarget().equals("attack")) {
+					// 攻击型技能：走标准L1SkillUse流程
+					L1SkillUse skillUse = new L1SkillUse();
+					skillUse.handleCommands(_pc, wm.getSkillId(), _target.getId(),
+						_target.getX(), _target.getY(), null, 0, wm.getCastType());
+				}
 			} catch (Throwable t) { t.printStackTrace(); }
 		}
 	}
