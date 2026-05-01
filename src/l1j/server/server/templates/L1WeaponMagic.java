@@ -6,6 +6,7 @@ public class L1WeaponMagic {
 	private int _probability;
 	private int _enchantBonus;
 	private int _castType;
+	private int _triggerType;
 
 	public int getWeaponId()          { return _weaponId; }
 	public void setWeaponId(int v)    { _weaponId = v; }
@@ -17,4 +18,6 @@ public class L1WeaponMagic {
 	public void setEnchantBonus(int v){ _enchantBonus = v; }
 	public int getCastType()          { return _castType; }
 	public void setCastType(int v)    { _castType = v; }
+	public int getTriggerType()       { return _triggerType; }
+	public void setTriggerType(int v) { _triggerType = v; }
 }

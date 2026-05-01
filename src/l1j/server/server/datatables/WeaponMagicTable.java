@@ -44,6 +44,8 @@ public class WeaponMagicTable {
 				wm.setProbability(rs.getInt("probability"));
 				wm.setEnchantBonus(rs.getInt("enchant_bonus"));
 				wm.setCastType(rs.getInt("cast_type"));
+				wm.setTriggerType(rs.getInt("trigger_type"));
+				wm.setTriggerType(rs.getInt("trigger_type"));
 				_map.put(wm.getWeaponId(), wm);
 			}
 		} catch (SQLException e) {
