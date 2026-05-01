@@ -58,6 +58,7 @@ import l1j.server.server.datatables.SpawnTable;
 import l1j.server.server.datatables.SprTable;
 import l1j.server.server.datatables.UBSpawnTable;
 import l1j.server.server.datatables.WeaponSkillTable;
+import l1j.server.server.datatables.WeaponMagicTable;
 import l1j.server.server.model.Dungeon;
 import l1j.server.server.model.ElementalStoneGenerator;
 import l1j.server.server.model.Getback;
@@ -288,6 +289,7 @@ public class GameServer extends Thread {
 		L1NpcRegenerationTimer.getInstance();
 		ChatLogTable.getInstance();
 		WeaponSkillTable.getInstance();
+		WeaponMagicTable.getInstance();
 		NpcActionTable.load();
 		GMCommandsConfig.load();
 		Getback.loadGetBack();

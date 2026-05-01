@@ -106,6 +106,8 @@ import l1j.server.server.serverpackets.S_SkillHaste;
 import l1j.server.server.datatables.WeaponMagicTable;
 import l1j.server.server.model.skill.L1SkillUse;
 import l1j.server.server.templates.L1WeaponMagic;
+import l1j.server.server.model.skill.L1BuffUtil;
+import l1j.server.server.model.Instance.L1MonsterInstance;
 
 public class L1Attack {
 	private L1PcInstance _pc = null;
@@ -1977,12 +1979,15 @@ private int calcAttrEnchantDmg() {
 		if (prob > Random.nextInt(100) + 1) {
 			try {
 				L1Skills skill = SkillsTable.getInstance().getTemplate(wm.getSkillId());
-				if (skill != null && _target != null
-						&& (skill.getTarget().equals("buff") || skill.getTarget().equals("none"))) {
+			if (skill != null && _target != null) {
+				// ★ 根据 trigger_type 决定技能执行路径 ★
+				//   trigger_type=1 → 减益/状态技能，直接对目标生效
+				//   trigger_type=0/其他 → 走标准 L1SkillUse 流程（含迷魅术等复杂技能）
+				if (wm.getTriggerType() == 1) {
 					// 减益/状态技能：发送施法动画后直接对当前攻击目标生效
 					if (_pc != null) {
-						_pc.sendPackets(new S_SkillSound(_pc.getId(), skill.getCastGfx()));
-						_pc.broadcastPacket(new S_SkillSound(_pc.getId(), skill.getCastGfx()));
+						_pc.sendPackets(new S_SkillSound(_target.getId(), skill.getCastGfx()));
+						_pc.broadcastPacket(new S_SkillSound(_target.getId(), skill.getCastGfx()));
 					}
 					if (wm.getSkillId() == 29 || wm.getSkillId() == 76) { // 缓速术/集体缓速术
 						if (_target.getMoveSpeed() == 0) {
@@ -1990,15 +1995,30 @@ private int calcAttrEnchantDmg() {
 							_pc.broadcastPacket(new S_SkillHaste(_target.getId(), 2, 0));
 							_target.setMoveSpeed(2);
 							_target.setSkillEffect(wm.getSkillId(), 64 * 1000);
-						}								
+						}
 					}
-					// 如需新增其他减益技能，在此添加else if分支
-				} else if (skill != null && skill.getTarget().equals("attack")) {
-					// 攻击型技能：走标准L1SkillUse流程
-					L1SkillUse skillUse = new L1SkillUse();
-					skillUse.handleCommands(_pc, wm.getSkillId(), _target.getId(),
-						_target.getX(), _target.getY(), null, 0, wm.getCastType());
+				} else {
+					// trigger_type != 1 → 走标准L1SkillUse流程
+					// 迷魅术 (skill 36) 绕过 L1SkillUse 内部的概率检查，直接调用 L1BuffUtil
+					if (wm.getSkillId() == 36) {
+						if (_target instanceof L1MonsterInstance
+							&& ((L1MonsterInstance)_target).getNpcTemplate().isTamable()) {
+							// 播放迷魅动画
+							L1Skills charmSkill = SkillsTable.getInstance().getTemplate(36);
+							if (_pc != null && charmSkill != null) {
+								_pc.sendPackets(new S_EffectLocation(_target.getX(), _target.getY(), charmSkill.getCastGfx()));
+								_pc.broadcastPacket(new S_EffectLocation(_target.getX(), _target.getY(), charmSkill.getCastGfx()));
+							}
+							// 直接执行迷魅效果，跳过概率判定（武器触发概率已由 weapon_magic 控制）
+							L1BuffUtil.skillEffect(_pc, _target, _target, 36, 0, 0);
+						}
+					} else {
+						L1SkillUse skillUse = new L1SkillUse();
+						skillUse.handleCommands(_pc, wm.getSkillId(), _target.getId(),
+							_target.getX(), _target.getY(), null, 0, wm.getCastType());
+					}
 				}
+			}
 			} catch (Throwable t) { t.printStackTrace(); }
 		}
 	}
