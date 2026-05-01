@@ -201,6 +201,8 @@ public class L1WeaponSkill {
 			return 0;
 		}
 
+		double damage = 0;
+		boolean isRealSpell = false;
 		int skillId = weaponSkill.getSkillId();
 		if (skillId != 0) {
 			L1Skills skill = SkillsTable.getInstance().getTemplate(skillId);
@@ -209,6 +211,11 @@ public class L1WeaponSkill {
 					cha.setSkillEffect(skillId,
 							weaponSkill.getSkillTime() * 1000);
 				}
+			} else if (skill != null && skill.getTarget().equals("attack")) {
+				// 真魔法：L1Magic 伤害计算(INT/SP/MR/属性全生效)
+				L1Magic magic = new L1Magic(pc, cha);
+				damage = magic.calcMagicDamage(skillId);
+				isRealSpell = true;
 			}
 		}
 
@@ -232,12 +239,14 @@ public class L1WeaponSkill {
 			}
 		}
 
-		double damage = 0;
-		int randomDamage = weaponSkill.getRandomDamage();
-		if (randomDamage != 0) {
-			damage = Random.nextInt(randomDamage);
+		damage = 0;
+		if (!isRealSpell) {
+			int randomDamage = weaponSkill.getRandomDamage();
+			if (randomDamage != 0) {
+				damage = Random.nextInt(randomDamage);
+			}
+			damage += weaponSkill.getFixDamage();
 		}
-		damage += weaponSkill.getFixDamage();
 
 		// 依角色能力加成的額外傷害：
 		if (weaponSkill.getWinStr() != 0) {

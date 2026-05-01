@@ -102,6 +102,10 @@ import l1j.server.server.templates.L1Skills;
 import l1j.server.server.types.Point;
 import l1j.server.server.utils.Random;
 
+import l1j.server.server.datatables.WeaponMagicTable;
+import l1j.server.server.model.skill.L1SkillUse;
+import l1j.server.server.templates.L1WeaponMagic;
+
 public class L1Attack {
 	private L1PcInstance _pc = null;
 
@@ -1954,6 +1958,28 @@ private int calcAttrEnchantDmg() {
 				chaser.begin();
 			}
 		}
+
+	// 新增：weapon_magic表驱动（自定义魔法武器，如火焰武士刀）
+	L1WeaponMagic wm = WeaponMagicTable.getInstance().get(_weaponId);
+	if (wm != null) {
+		int prob = wm.getProbability();
+		try {
+			L1ItemInstance weapon = _pc.getWeapon();
+			if (weapon != null && weapon.getItemId() == _weaponId) {
+				int enchant = weapon.getEnchantLevel();
+				if (enchant >= 6) {
+					prob += (enchant - 6) * wm.getEnchantBonus();
+				}
+			}
+		} catch (Throwable t) {}
+		if (prob > Random.nextInt(100) + 1) {
+			try {
+				L1SkillUse skillUse = new L1SkillUse();
+				skillUse.handleCommands(_pc, wm.getSkillId(), _target.getId(),
+					_target.getX(), _target.getY(), null, 0, wm.getCastType());
+			} catch (Throwable t) { t.printStackTrace(); }
+		}
+	}
 	}
 
 	/* ■■■■■■■■■■■■■■ 攻撃モーション送信 ■■■■■■■■■■■■■■ */
