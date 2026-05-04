@@ -1,0 +1,19 @@
+# Build artifacts
+bin/
+build/
+
+# IDE
+.DS_Store
+.idea/
+*.iml
+.vscode/
+
+# Logs
+log/
+*.log
+*.log.*
+server_runtime.log
+server_startup.log
+
+# OS
+Thumbs.db
