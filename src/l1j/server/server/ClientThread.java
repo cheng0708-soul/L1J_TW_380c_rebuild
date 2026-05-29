@@ -555,6 +555,7 @@ public class ClientThread implements Runnable, PacketOutput {
 
 	public static void quitGame(L1PcInstance pc) {
 		// 如果死掉回到城中，設定飽食度
+		pc.setTeleport(false); // 清理传送标记，防止断开时残留导致卡死
 		if (pc.isDead()) {
 			try {
 				Thread.sleep(2000);// 暫停該執行續，優先權讓給expmonitor
