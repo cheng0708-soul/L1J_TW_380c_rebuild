@@ -21,6 +21,7 @@ import l1j.server.server.model.Instance.L1PcInstance;
 import l1j.server.server.serverpackets.S_Disconnect;
 
 public class L1PcDeleteTimer extends TimerTask {
+	private Timer _timer;
 	public L1PcDeleteTimer(L1PcInstance pc) {
 		_pc = pc;
 	}
@@ -32,8 +33,8 @@ public class L1PcDeleteTimer extends TimerTask {
 	}
 
 	public void begin() {
-		Timer timer = new Timer();
-		timer.schedule(this, 10 * 60 * 1000);
+		_timer = new Timer();
+		_timer.schedule(this, 10 * 60 * 1000);
 	}
 
 	private final L1PcInstance _pc;

@@ -106,6 +106,7 @@ public class C_Door extends ClientBasePacket {
 
 	public class CloseTimer extends TimerTask {
 
+		private Timer _timer;
 		private L1DoorInstance _door;
 
 		public CloseTimer(L1DoorInstance door) {
@@ -117,11 +118,15 @@ public class C_Door extends ClientBasePacket {
 			if (_door.getOpenStatus() == ActionCodes.ACTION_Open) {
 				_door.close();
 			}
+			if (_timer != null) {
+				_timer.cancel();
+				_timer = null;
+			}
 		}
 
 		public void begin() {
-			Timer timer = new Timer();
-			timer.schedule(this, 5 * 1000);
+			_timer = new Timer();
+			_timer.schedule(this, 5 * 1000);
 		}
 	}
 

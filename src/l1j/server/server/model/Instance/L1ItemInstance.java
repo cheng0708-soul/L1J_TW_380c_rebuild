@@ -78,6 +78,7 @@ public class L1ItemInstance extends L1Object {
 	private boolean _isRunning = false;
 
 	private EnchantTimer _timer;
+	private Timer _effectTimer;
 
 	private int _bless;
 
@@ -1172,6 +1173,10 @@ public class L1ItemInstance extends L1Object {
 				_pc.sendPackets(new S_ServerMessage(308, getLogName()));
 				_isRunning = false;
 				_timer = null;
+				if (_effectTimer != null) {
+					_effectTimer.cancel();
+					_effectTimer = null;
+				}
 			} catch (Exception e) {
 			}
 		}
@@ -1340,8 +1345,12 @@ public class L1ItemInstance extends L1Object {
 		}
 		setAcByMagic(3);
 		_pc = pc;
+		if (_effectTimer != null) {
+			_effectTimer.cancel();
+		}
 		_timer = new EnchantTimer();
-		(new Timer()).schedule(_timer, skillTime);
+		_effectTimer = new Timer();
+		_effectTimer.schedule(_timer, skillTime);
 		_isRunning = true;
 	}
 
@@ -1383,8 +1392,12 @@ public class L1ItemInstance extends L1Object {
 		}
 
 		_pc = pc;
+		if (_effectTimer != null) {
+			_effectTimer.cancel();
+		}
 		_timer = new EnchantTimer();
-		(new Timer()).schedule(_timer, skillTime);
+		_effectTimer = new Timer();
+		_effectTimer.schedule(_timer, skillTime);
 		_isRunning = true;
 	}
 
@@ -1405,6 +1418,7 @@ public class L1ItemInstance extends L1Object {
 	}
 
 	private L1EquipmentTimer _equipmentTimer;
+	private Timer _equipmentTimer_Timer;
 
 	public void startEquipmentTimer(L1PcInstance pc) {
 		if (getRemainingTime() > 0) {

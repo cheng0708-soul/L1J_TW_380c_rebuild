@@ -20,6 +20,7 @@ import java.util.TimerTask;
 import l1j.server.server.model.Instance.L1ItemInstance;
 
 public class L1ItemOwnerTimer extends TimerTask {
+	private Timer _timer;
 	public L1ItemOwnerTimer(L1ItemInstance item, int timeMillis) {
 		_item = item;
 		_timeMillis = timeMillis;
@@ -32,8 +33,8 @@ public class L1ItemOwnerTimer extends TimerTask {
 	}
 
 	public void begin() {
-		Timer timer = new Timer();
-		timer.schedule(this, _timeMillis);
+		_timer = new Timer();
+		_timer.schedule(this, _timeMillis);
 	}
 
 	private final L1ItemInstance _item;

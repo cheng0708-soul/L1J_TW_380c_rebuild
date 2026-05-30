@@ -22,6 +22,7 @@ import l1j.server.server.model.Instance.L1NpcInstance;
 import l1j.server.server.serverpackets.S_DoActionGFX;
 
 public class L1NpcDeleteTimer extends TimerTask {
+	private Timer _timer;
 	public L1NpcDeleteTimer(L1NpcInstance npc, int timeMillis) {
 		_npc = npc;
 		_timeMillis = timeMillis;
@@ -45,12 +46,16 @@ public class L1NpcDeleteTimer extends TimerTask {
 			}
 			_npc.deleteMe();
 			cancel();
+			if (_timer != null) {
+				_timer.cancel();
+				_timer = null;
+			}
 		}
 	}
 
 	public void begin() {
-		Timer timer = new Timer();
-		timer.schedule(this, _timeMillis);
+		_timer = new Timer();
+		_timer.schedule(this, _timeMillis);
 	}
 
 	private final L1NpcInstance _npc;
